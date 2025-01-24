@@ -352,8 +352,12 @@ require('lazy').setup({
       words = { enabled = true },
     },
   },
-}
-}, {})
+  {
+    "stevearc/conform.nvim",
+    opts = {},
+  }
+  }
+})
 
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
