@@ -21,16 +21,16 @@ require('lazy').setup({
   'tpope/vim-sleuth',
 
   {
-     -- LSP Configuration & Plugins
-     'neovim/nvim-lspconfig',
-     dependencies = {
-       -- Automatically install LSPs to stdpath for neovim
-       { 'williamboman/mason.nvim', config = true },
-       'williamboman/mason-lspconfig.nvim',
-       { 'j-hui/fidget.nvim', opts = {} },
-       -- Additional lua configuration, makes nvim stuff amazing!
-       'folke/neodev.nvim',
-     },
+    -- LSP Configuration & Plugins
+    'neovim/nvim-lspconfig',
+    dependencies = {
+      -- Automatically install LSPs to stdpath for neovim
+      { 'williamboman/mason.nvim', config = true },
+      'williamboman/mason-lspconfig.nvim',
+      { 'j-hui/fidget.nvim',       opts = {} },
+      -- Additional lua configuration, makes nvim stuff amazing!
+      'folke/neodev.nvim',
+    },
   },
 
   {
@@ -223,17 +223,17 @@ require('lazy').setup({
   {
     -- amongst your other plugins
     {
-        'akinsho/toggleterm.nvim',
-        version = "*",
-        config = true
+      'akinsho/toggleterm.nvim',
+      version = "*",
+      config = true
     }
   },
   -- using lazy.nvim
   {
-      'nvim-lualine/lualine.nvim',
-      dependencies = {
-        'nvim-tree/nvim-web-devicons'
-      }
+    'nvim-lualine/lualine.nvim',
+    dependencies = {
+      'nvim-tree/nvim-web-devicons'
+    }
   },
   -- {
   --     'goolord/alpha-nvim',
@@ -248,114 +248,118 @@ require('lazy').setup({
     dependencies = { "nvim-tree/nvim-web-devicons" },
   },
   {
-  "christoomey/vim-tmux-navigator",
-  lazy = false,
-  cmd = {
-    "TmuxNavigateLeft",
-    "TmuxNavigateDown",
-    "TmuxNavigateUp",
-    "TmuxNavigateRight",
-    "TmuxNavigatePrevious",
-  },
-  keys = {
-    { "<c-h>", "<cmd><C-U>TmuxNavigateLeft<cr>" },
-    { "<c-j>", "<cmd><C-U>TmuxNavigateDown<cr>" },
-    { "<c-k>", "<cmd><C-U>TmuxNavigateUp<cr>" },
-    { "<c-l>", "<cmd><C-U>TmuxNavigateRight<cr>" },
-    { "<c-\\>", "<cmd><C-U>TmuxNavigatePrevious<cr>" },
-  },
-  -- Leetcode plugin
-  {
+    "christoomey/vim-tmux-navigator",
+    lazy = false,
+    cmd = {
+      "TmuxNavigateLeft",
+      "TmuxNavigateDown",
+      "TmuxNavigateUp",
+      "TmuxNavigateRight",
+      "TmuxNavigatePrevious",
+    },
+    keys = {
+      { "<c-h>",  "<cmd><C-U>TmuxNavigateLeft<cr>" },
+      { "<c-j>",  "<cmd><C-U>TmuxNavigateDown<cr>" },
+      { "<c-k>",  "<cmd><C-U>TmuxNavigateUp<cr>" },
+      { "<c-l>",  "<cmd><C-U>TmuxNavigateRight<cr>" },
+      { "<c-\\>", "<cmd><C-U>TmuxNavigatePrevious<cr>" },
+    },
+    -- Leetcode plugin
+    {
       "kawre/leetcode.nvim",
       build = ":TSUpdate html",
       dependencies = {
-          "nvim-telescope/telescope.nvim",
-          "nvim-lua/plenary.nvim", -- required by telescope
-          "MunifTanjim/nui.nvim",
+        "nvim-telescope/telescope.nvim",
+        "nvim-lua/plenary.nvim", -- required by telescope
+        "MunifTanjim/nui.nvim",
 
-          -- optional
-          "rcarriga/nvim-notify",
+        -- optional
+        "rcarriga/nvim-notify",
       },
       opts = {
-          -- configuration goes here
+        -- configuration goes here
       },
-  },
-  {
+    },
+    {
       'MunifTanjim/nui.nvim',
       'VonHeikemen/fine-cmdline.nvim',
       'VonHeikemen/searchbox.nvim'
-  },
-  {
-    "ellisonleao/gruvbox.nvim",
-    priority = 1000,
-    config = true,
-    opts = ...
-  },
-  {
-    'shaunsingh/nord.nvim'
-  },
-  {
-    'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons'
-  },
-  {
-    'numToStr/FTerm.nvim'
-  },
-  {
-    'makerj/vim-pdf'
-  },
-  {
-    'edluffy/hologram.nvim'
-  },
-  {
-    "azratul/live-share.nvim",
-    dependencies = {
-      "jbyuki/instant.nvim",
     },
-    config = function()
-      vim.g.instant_username = "pratham"
-      require("live-share").setup({
-        port_internal = 8765,
-        max_attempts = 20,
-        service = "nokey@localhost.run",
-      })
-    end
-  },
-  {
-    "folke/snacks.nvim",
-    priority = 1000,
-    lazy = false,
-    opts = {
-      -- your configuration comes here
-      -- or leave it empty to use the default settings
-      -- refer to the configuration section below
-      bigfile = { enabled = true },
-      dashboard = { enabled = true,
-        sections = {
-          { section = "header" },
-          { section = "keys", gap = 1, padding = 1 },
-          { section = "startup" },
-          {
-            section = "terminal",
-            cmd = "pokemon-colorscripts -r --no-title; sleep .1",
-            random = 10,
-            pane = 2,
-            indent = 4,
-            height = 30,
+    {
+      "ellisonleao/gruvbox.nvim",
+      priority = 1000,
+      config = true,
+      opts = ...
+    },
+    {
+      'shaunsingh/nord.nvim'
+    },
+    {
+      'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons'
+    },
+    {
+      'numToStr/FTerm.nvim'
+    },
+    {
+      'makerj/vim-pdf'
+    },
+    {
+      'edluffy/hologram.nvim'
+    },
+    {
+      "azratul/live-share.nvim",
+      dependencies = {
+        "jbyuki/instant.nvim",
+      },
+      config = function()
+        vim.g.instant_username = "pratham"
+        require("live-share").setup({
+          port_internal = 8765,
+          max_attempts = 20,
+          service = "nokey@localhost.run",
+        })
+      end
+    },
+    {
+      "folke/snacks.nvim",
+      priority = 1000,
+      lazy = false,
+      opts = {
+        -- your configuration comes here
+        -- or leave it empty to use the default settings
+        -- refer to the configuration section below
+        bigfile = { enabled = true },
+        dashboard = {
+          enabled = true,
+          sections = {
+            { section = "header" },
+            { section = "keys",   gap = 1, padding = 1 },
+            { section = "startup" },
+            {
+              section = "terminal",
+              cmd = "pokemon-colorscripts -r --no-title; sleep .1",
+              random = 10,
+              pane = 2,
+              indent = 4,
+              height = 30,
+            },
           },
         },
+        indent = { enabled = true },
+        notifier = { enabled = true },
+        quickfile = { enabled = true },
+        scroll = { enabled = true },
+        statuscolumn = { enabled = true },
+        words = { enabled = true },
       },
-      indent = { enabled = true },
-      notifier = { enabled = true },
-      quickfile = { enabled = true },
-      scroll = { enabled = true },
-      statuscolumn = { enabled = true },
-      words = { enabled = true },
     },
-  },
-  {
-    "stevearc/conform.nvim",
-    opts = {},
-  }
+    {
+      "stevearc/conform.nvim",
+      opts = {},
+    },
+    {
+      'eddyekofo94/gruvbox-flat.nvim',
+    }
   }
 })
 
