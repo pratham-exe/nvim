@@ -70,11 +70,11 @@ keymap("n", "<leader>ff", "<cmd>Telescope find_files<cr>", opts)
 -- keymap("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
 keymap("n", "<leader>t", "<cmd>Telescope live_grep<cr>", opts)
 
--- Neotree 
+-- Neotree
 -- keymap("n","<leader>e",":Neotree toggle<cr>",opts)
 
--- oil.nvim 
-keymap("n","<leader>o",":Oil<cr>",opts)
+-- oil.nvim
+keymap("n", "<leader>o", ":Oil<cr>", opts)
 
 -- FineCmdline
 -- keymap("n", ":", "<cmd>FineCmdline<CR>", opts)

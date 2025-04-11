@@ -1,6 +1,6 @@
 require("bufferline").setup({
-    options = {
-        separator_style = "thin",
-    },
-    highlights = highlights,
+	options = {
+		separator_style = "thin",
+	},
+	highlights = highlights,
 })

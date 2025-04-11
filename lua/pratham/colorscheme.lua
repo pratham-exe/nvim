@@ -1,2 +1,2 @@
 --Lua:
-vim.cmd [[colorscheme gruvbox-flat]]
+vim.cmd([[colorscheme gruvbox-flat]])
