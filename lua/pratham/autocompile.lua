@@ -48,3 +48,15 @@ autocmd("FileType", {
 		vim.api.nvim_buf_set_keymap(0, "n", "<C-c>", ":vsplit<CR>:te go run . <CR>i", opts)
 	end,
 })
+autocmd("FileType", {
+	pattern = "java",
+	callback = function()
+		vim.api.nvim_buf_set_keymap(
+			0,
+			"n",
+			"<C-c>",
+			":vsplit<CR>:te javac % && java " .. vim.fn.expand("%:t:r") .. "<CR>i",
+			opts
+		)
+	end,
+})
