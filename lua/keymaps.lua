@@ -18,11 +18,13 @@ keymap.set("x", "J", ":move '>+1<CR>gv-gv", { desc = "Move down in visual block"
 keymap.set("x", "K", ":move '<-2<CR>gv-gv", { desc = "Move up in visual block" })
 
 -- Split Window
-keymap.set("n", "<leader>sv", "<C-w>v", { desc = "[S]plit window [V]ertically" })
-keymap.set("n", "<leader>sz", "<C-w>s", { desc = "[S]plit window hori[Z]ontally" })
+keymap.set("n", "<leader>sv", "<C-w>v", { desc = "Split window Vertically" })
+keymap.set("n", "<leader>sz", "<C-w>s", { desc = "Split window horiZontally" })
 
 -- Buffers
 keymap.set("n", "<S-h>", ":bp<CR>", { desc = "Go to previous buffer" })
 keymap.set("n", "<S-l>", ":bn<CR>", { desc = "Go to next buffer" })
 keymap.set("n", "<leader>q", ":bd<CR>", { desc = "Close buffer" })
-keymap.set("n", "<leader>l", ":ls<CR>", { desc = "[L]ist buffers" })
+
+-- Oil
+keymap.set("n", "<leader>o", ":Oil<CR>", { desc = "Open oil nvim" })

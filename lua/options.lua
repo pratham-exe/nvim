@@ -42,7 +42,6 @@ local options = {
 	guifont = "monospace:h17",
 	breakindent = true,
 	list = true,
-	listchars = { tab = "» ", trail = "·", nbsp = "␣" },
 	inccommand = "split",
 	confirm = true,
 }
