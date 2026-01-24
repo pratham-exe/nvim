@@ -28,3 +28,6 @@ keymap.set("n", "<leader>q", ":bd<CR>", { desc = "Close buffer" })
 
 -- Nvim Tree
 keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", { desc = "Toggle Nvim Tree" })
+
+-- LazyGit
+keymap.set("n", "<leader>lg", "<cmd>LazyGit<CR>", { desc = "LazyGit" })

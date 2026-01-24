@@ -6,6 +6,12 @@ return {
 			git = {
 				ignore = false,
 			},
+			view = {
+				width = {
+					min = 50,
+					max = 100,
+				},
+			},
 		})
 	end,
 }
