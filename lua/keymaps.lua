@@ -26,5 +26,5 @@ keymap.set("n", "<S-h>", ":bp<CR>", { desc = "Go to previous buffer" })
 keymap.set("n", "<S-l>", ":bn<CR>", { desc = "Go to next buffer" })
 keymap.set("n", "<leader>q", ":bd<CR>", { desc = "Close buffer" })
 
--- Oil
-keymap.set("n", "<leader>o", ":Oil<CR>", { desc = "Open oil nvim" })
+-- Nvim Tree
+keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", { desc = "Toggle Nvim Tree" })
