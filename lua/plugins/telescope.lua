@@ -16,14 +16,46 @@ return {
 		pcall(require("telescope").load_extension, "fzf")
 
 		local builtin = require("telescope.builtin")
-		vim.keymap.set("n", "<leader>sf", builtin.find_files, { desc = "Search Files" })
-		vim.keymap.set("n", "<leader>sg", builtin.live_grep, { desc = "Live Grep" })
-		vim.keymap.set("n", "<leader><leader>", builtin.buffers, { desc = "Find existing buffers" })
-		vim.keymap.set("n", "<leader>/", function()
-			builtin.current_buffer_fuzzy_find(require("telescope.themes").get_dropdown({
-				winblend = 10,
+		vim.keymap.set("n", "<leader>sf", function()
+			builtin.find_files({
 				previewer = false,
-			}))
-		end, { desc = "Fuzzily search in current buffer" })
+				layout_strategy = "horizontal",
+				layout_config = {
+					width = 0.9,
+					height = 0.9,
+				},
+			})
+		end, { desc = "Search Files (no preview)" })
+		vim.keymap.set("n", "<leader>sg", function()
+			builtin.live_grep({
+				previewer = false,
+				layout_strategy = "horizontal",
+				layout_config = {
+					width = 0.9,
+					height = 0.9,
+					preview_width = 0.35,
+				},
+			})
+		end, { desc = "Live Grep (no preview)" })
+		vim.keymap.set("n", "<leader><leader>", function()
+			builtin.buffers({
+				previewer = false,
+				layout_strategy = "horizontal",
+				layout_config = {
+					width = 0.9,
+					height = 0.9,
+				},
+			})
+		end, { desc = "Find existing buffers (no preview)" })
+		vim.keymap.set("n", "<leader>/", function()
+			builtin.current_buffer_fuzzy_find({
+				previewer = false,
+				layout_strategy = "horizontal",
+				layout_config = {
+					width = 0.9,
+					height = 0.9,
+				},
+			})
+		end, { desc = "Fuzzy search in buffer" })
 	end,
 }
