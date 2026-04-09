@@ -2,7 +2,6 @@ return {
 	"hrsh7th/nvim-cmp",
 	dependencies = {
 		"neovim/nvim-lspconfig",
-		"hrsh7th/cmp-buffer",
 		{
 			"L3MON4D3/LuaSnip",
 			version = "v2.*",

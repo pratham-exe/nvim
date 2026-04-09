@@ -31,3 +31,6 @@ keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", { desc = "Toggle Nvim Tree" 
 
 -- LazyGit
 keymap.set("n", "<leader>lg", "<cmd>LazyGit<CR>", { desc = "LazyGit" })
+
+-- Ranger
+keymap.set("n", "<leader>ra", ":RnvimrToggle<CR>", { desc = "Ranger inside neovim" })
