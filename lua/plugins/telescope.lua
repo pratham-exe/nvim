@@ -18,6 +18,17 @@ return {
 		local builtin = require("telescope.builtin")
 		vim.keymap.set("n", "<leader>sf", function()
 			builtin.find_files({
+				hidden = true,
+				no_ignore = true,
+				find_command = {
+					"fd", "--type", "f", "--hidden", "--no-ignore",
+					"--exclude", "node_modules",
+					"--exclude", ".next",
+					"--exclude", ".git",
+					"--exclude", "dist",
+					"--exclude", "build",
+					"--exclude", ".turbo",
+				},
 				previewer = false,
 				layout_strategy = "horizontal",
 				layout_config = {
