@@ -14,6 +14,10 @@ keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
 -- Stay in Indent Mode
 keymap.set("v", "<", "<gv", { desc = "Move left in visual mode" })
 keymap.set("v", ">", ">gv", { desc = "Move right in visual mode" })
+
+-- Paste in visual mode WITHOUT overwriting the yanked register.
+-- Deletes selection to black-hole, then pastes the original register.
+keymap.set("x", "p", '"_dP', { desc = "Paste without overwriting register" })
 keymap.set("x", "J", ":move '>+1<CR>gv-gv", { desc = "Move down in visual block" })
 keymap.set("x", "K", ":move '<-2<CR>gv-gv", { desc = "Move up in visual block" })
 
