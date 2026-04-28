@@ -47,6 +47,10 @@ return {
 		require("mason-lspconfig").setup({
 			handlers = {
 				function(server_name)
+					-- nvim-java owns jdtls; skip mason-lspconfig's default handler for it
+					if server_name == "jdtls" then
+						return
+					end
 					require("lspconfig")[server_name].setup({
 						capabilities = capabilities,
 					})
